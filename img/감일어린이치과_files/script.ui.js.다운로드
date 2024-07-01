@@ -1,0 +1,148 @@
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 150) {
+		$('header').addClass('bar');
+	} else {
+		$('header').removeClass('bar');
+	}
+});
+$(window).scroll(function(){
+	$('section').each(function(){
+		var articlaTopAni = $(this).offset().top - 340;
+		if( $(document).scrollTop() > articlaTopAni ){
+			$(this).addClass('on');
+			//$(this).css('border','1px solid red');
+		}else{
+			$(this).removeClass('on');
+		}
+	});
+
+	//수면치료횟수 count
+	$('#page05.on .counter').each(function() {
+	  var $this = $(this),
+		countTo = $this.attr('data-count');
+		$({ countNum: $this.text()}).animate({
+		countNum: countTo
+	  },
+	  {
+		duration: 500,
+		easing:'linear',
+		step: function() {
+		  $this.text(Math.floor(this.countNum));
+		},
+		complete: function() {
+		  $this.text(this.countNum);
+		  //alert('finished');
+		}
+	  });
+	});
+
+});
+
+
+$(function(){
+	$(window).resize(function() {
+		var width = $(window).width();
+		//console.log(width);
+
+		if (width < 1025) {
+			$( 'header nav' ).addClass('m_menu');
+		} else {
+			$( 'header nav' ).removeClass('m_menu');
+		}
+	}).resize();
+	//모바일 메뉴
+	$('.m_menu > ul > li').click(function(){
+		$(this).find('span').toggleClass('on');
+	});
+	$('.menub').click(function(){
+		if($(".menub").is(':checked')){
+			//$('.a_menu').css('border','1px solid red');
+			$('header').addClass('on2');
+			$('.m_menu').animate({right:'0'},500);
+			$('body').append('<div class="bg_overlay" style="z-index:9"></div>');
+		}else{
+			//$('.a_menu').css('border','1px solid blue');
+			$('header').removeClass('on2');
+			$('.bg_overlay').remove();
+			$('.m_menu').animate({right:'-100%'},500);
+		}
+	});
+
+	$('a.page').bind('click', function(event) {
+		var $anchor = $(this);
+		$(this).parent().addClass('active');
+		$('html, body').stop().animate({
+		scrollTop: $($anchor.attr('href')).offset().top - 120}, 1200, 'swing');
+
+		$('header').removeClass('on2');
+		$('.bg_overlay').remove();
+		$('.m_menu').animate({right:'-100%'},500);
+		$('.menub').prop("checked",false);
+
+		event.preventDefault();
+	});
+	var item = $('.navMenu > li');
+	$(".navMenu > li").click(function(){
+		$(this).addClass('active');
+		item.not($(this)).removeClass('active');
+	});
+
+   // 병원소개
+    var galleryThumbs = new Swiper('.mainView .gallery-thumbs', {
+      spaceBetween: 5,
+      slidesPerView: 5,
+      slidesPerColumn: 1,
+      //freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      allowTouchMove: false,
+    });
+    var galleryTop = new Swiper('.mainView .gallery-top', {
+      effect: 'fade',
+      speed: 500,
+      navigation: {
+        nextEl: '.mainView .swiper-next',
+        prevEl: '.mainView .swiper-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      },
+    });
+
+
+   // 진료안내
+    var swiper = new Swiper('.information .swiper-container', {
+      spaceBetween: 12,
+      slidesPerView: 5,
+	  speed: 400,
+	  loop: false,
+	  autoHeight: false,
+	  loopFillGroupWithBlank: true,
+	  freeMode : true, 
+	  fadeEffect: {
+		crossFade: true
+	  },
+	  navigation: {
+		nextEl: '.information .swiper-next',
+		prevEl: '.information .swiper-prev',
+	  },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+      }
+    });
+
+	AOS.init({
+		//easing: 'ease-out-back',
+		duration: 1000,
+		once:'true'
+	});
+
+});
+
