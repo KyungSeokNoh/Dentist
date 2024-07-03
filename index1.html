@@ -25,9 +25,9 @@
         <div id="cont">
             <div class="img"><img src="img/환경.png" alt="환경"></div>
             <div class="text">
-                <a href="#"><img src="img/time.png" alt="time"><span>진료시간</span></a>
-                <a href="#"><img src="img/phone.png" alt="phone"><span>예약•상담 문의</span></a>
-                <a href="#"><img src="img/location.png" alt="icon"><span>오시는 길</span></a>
+                <a href="#info_head"><img src="img/time.png" alt="time"><span>진료시간</span></a>
+                <a href="#call"><img src="img/phone.png" alt="phone"><span>예약•상담 문의</span></a>
+                <a href="#address"><img src="img/location.png" alt="icon"><span>오시는 길</span></a>
             </div><!-- text -->
             <div class="cont_text">
                 <div class="con_text">
@@ -88,103 +88,135 @@
             <div class="subject">
                 <div class="sub_txt_pho">
                     <div>진료과목</div>
-                    <ul>
+                    <ul class="sub_img1">
                         <li><img src="img/subject_1.png" alt="sub1"></li>
-                        <li><p>구강검진 <br>
-                            영유아 구강검진</p>
+                        <li>
+                            <p>구강검진 <br>
+                                영유아 구강검진</p>
                         </li>
                     </ul>
 
-                    <ul>
+                    <ul class="sub_img2">
                         <li><img src="img/subject_2.png" alt="sub2"></li>
-                        <li><p>충치예방치료 <br>
-                            충치치료</p>
+                        <li>
+                            <p>충치예방치료 <br>
+                                충치치료</p>
                         </li>
                     </ul>
-                    <ul>
+                    <ul class="sub_img3">
                         <li><img src="img/subject_3.png" alt="sub3"></li>
-                        <li><p>수면진정치료</p>
+                        <li>
+                            <p>수면진정치료</p>
                         </li>
                     </ul>
-                    <ul>
+                    <ul class="sub_img4">
                         <li><img src="img/subject_4.png" alt="sub4"></li>
-                        <li><p>성장기 교정치료</p>
+                        <li>
+                            <p>성장기 교정치료</p>
                         </li>
                     </ul>
-                    <ul>
+                    <ul class="sub_img5">
                         <li><img src="img/subject_5.png" alt="sub5"></li>
-                        <li><p>외상치료</p>
+                        <li>
+                            <p>외상치료</p>
                         </li>
                     </ul>
-                    <ul>
+                    <ul class="sub_img6">
                         <li><img src="img/subject_6.png" alt="sub6"></li>
-                        <li><p>구강내소수술 <br>
-                            진료안내</p>
+                        <li>
+                            <p>구강내소수술 <br>
+                                진료안내</p>
                         </li>
                     </ul>
                 </div><!-- sub_txt_pho -->
             </div><!-- subject -->
 
             <div class="info">
-                <div>진료안내</div>
-                <div class="info_time">
-                    <div>진료시간</div>
-                    <div class="time">
-                        <div>평일 <br>
-                            오전 10:00 – 오후 06:30
-                        </div>
-                        <div>토요일 <br>
-                            오전 09:00 – 오후 02:00 <br>
-                            (토요일은 점심시간 없음)
-                        </div>
-                        <div>점심시간 <br>
-                            오후 12:30 – 오후 02:00</div>
-                    </div><!-- time -->
-                </div><!-- info_time -->
-                <div>예약제도 안내
-                    <div>서울참어린이치과는, <br>
-                        어린이 한명 한명에게 최선을 다해 진료하기 위하여, <br>
-                        보호자분들의 대기시간을 단축시켜 드리기 위하여, <br>
-                        <span>진료 예약제</span>를 시행하고 있습니다.</div>
-                </div><!-- 예약제도 안내 -->
-                <div>예약•상담 문의</div>
-                <p>02-0000-0000</p>
+                <div class="info_inner">
+
+                    <h2 id="info_head">진료안내</h2>
+                    <div class="info_total">
+                        <div class="info_time">
+                            <div>진료시간</div>
+                            <div class="time">
+                                <h2 class="week"> 평일</div>
+                                <div>오전 10:00 – 오후 06:30</div>
+
+                                <h2 class="sat">토요일 </h2>
+                                <div>오전 09:00 – 오후 02:00 <br>
+                                    (토요일은 점심시간 없음)</div>
+
+                                <h2 class="luch">점심시간</h2>
+                                <div>오후 12:30 – 오후 02:00</div>
+                                <div>일요일, 공휴일은 휴진입니다.</div>
+                            </div><!-- time -->
+
+                        </div><!-- info_time -->
+
+                        <div class="info_time1">
+                            <h2>예약제도 안내
+                                <div>서울참어린이치과는, <br>
+                                    어린이 한명 한명에게 최선을 다해 진료하기 위하여, <br>
+                                    보호자분들의 대기시간을 단축시켜 드리기 위하여, <br>
+                                    <span>진료 예약제</span>를 시행하고 있습니다.</div>
+                            </h2><!-- 예약제도 안내 -->
+                            <div>예약•상담 문의</div>
+                            <p>02-0000-0000</p>
+                        </div><!-- info_time1 -->
+                    </div><!-- info_total -->
+                </div><!-- info_inner -->
             </div><!-- info -->
 
-            <div class="address">
-                <div>오시는 길</div>
-                <div class="load">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.4761433512726!2d129.17510627668338!3d35.16968335790366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d0c88727929%3A0x88f5bd8b25fbdc42!2z7ISc7Jq47LC47Ja066aw7J207LmY6rO87J2Y7JuQ!5e0!3m2!1sko!2skr!4v1719804401183!5m2!1sko!2skr"></iframe>
-                </div><!-- load -->
-                <div class="busan">
-                    <div>주소</div>
-                    <div>부산광역시 해운대구 해운대로 814, 세종월드프라자 A동 4층 <br>
-                        <span>지하철 2호선 장산역 3번 출구</span></div>
-                </div><!-- busan -->
-                <div class="busan">
-                    <div>주차안내</div>
-                    <div>동 건물 지하주차장 <br>
-                        주차권에 병원 도장을 찍어가시면 동 건물 지하주차장 2시간 무료입니다</div>
-                </div><!-- busan -->
-                <div class="busan">
-                    <div>예약, 상담 문의</div>
-                    <div>02-0000-0000</div>
-                </div><!-- busan -->
+            <div id="address">
+                <div class="add_inner">
+                    <h2>오시는 길</h2>
+                    <div class="load_map">
+                        <div class="load">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.4761433512726!2d129.17510627668338!3d35.16968335790366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d0c88727929%3A0x88f5bd8b25fbdc42!2z7ISc7Jq47LC47Ja066aw7J207LmY6rO87J2Y7JuQ!5e0!3m2!1sko!2skr!4v1719804401183!5m2!1sko!2skr"></iframe>
+                        </div><!-- load -->
+                    </div><!-- load_map -->
+                    <div class="busan">
+                        <div class="add_busan">
+                            <img src="img/add.png" alt="add">
+                            <div>주소</div>
+                            <div>부산광역시 해운대구 해운대로 814, 세종월드프라자 A동 4층 <br>
+                                <span>지하철 2호선 장산역 3번 출구</span></div>
+                        </div><!-- busan -->
+                        <div class="add_parking">
+                            <img src="img/car.png" alt="car">
+                            <div>주차안내</div>
+                            <div>동 건물 지하주차장 <br>
+                                주차권에 병원 도장을 찍어가시면 동 건물 지하주차장 2시간 무료입니다</div>
+                        </div><!-- busan -->
+                        <div class="add_tel">
+                            <img src="img/tel.png" alt="tel">
+                            <div id="call">예약, 상담 문의</div>
+                            <div>02-0000-0000</div>
+                        </div><!-- busan -->
+                    </div><!-- busan -->
+                </div><!-- add_inner -->
             </div><!-- address -->
         </div><!-- intro -->
 
     </div><!-- cont -->
     <footer class="footer">
-        <div>
-            상호명 : 서울참어린이치과의원
-            대표자명 : 김아람
-            사업자 등록번호 : 350-90-00283 <br>
-            주소 : 부산시 해운대구 해운대로 814 세종월드프라자 4층
-            전화 : 051-701-2879
-            FAX : 051-701-2878 <br>
-            <span class="foot_name">Copyright ⓒ서울참어린이치과의원 All rights reserved</span>
-        </div>
+        <div class="foot_inner">
+            <div class="foot_logo">
+                <img src="img/치과-로고_02.png" alt="logo">
+                <h2>수마일 어린이 치과</h2>
+            </div>
+            <div class="foot_title">
+                <p>
+                상호명 : 서울참어린이치과의원
+                대표자명 : 김아람
+                사업자 등록번호 : 350-90-00283 <br>
+                주소 : 부산시 해운대구 해운대로 814 세종월드프라자 4층
+                전화 : 051-701-2879
+                FAX : 051-701-2878 <br>
+                Copyright ⓒ<span class="foot_name">어린이치과의원</span> All rights reserved</p>
+            </div>
+        </div><!-- foot_inner -->
     </footer>
 
 
