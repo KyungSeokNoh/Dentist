@@ -170,7 +170,8 @@ h2{
 }
 
 .history {
-    margin-top: 30px;
+    margin-top: 10px;
+    line-height: 23px;
 }
 
 /* photo 영역 */
@@ -345,9 +346,10 @@ h2{
 .info_time1 {
     /* border: 1px solid black; */
     float: right;
-    padding: 50px 20px;
+    padding: 20px 20px;
     height: 260px;
     text-align: center;
+    line-height: 30px;
 }
 
 /* address 영역 */
